@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08070a">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Para Jael 🖤</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Pétalos / copos de nieve -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Detalles góticos: niebla, telarañas y murciélagos -->
+  <div class="fog" aria-hidden="true"></div>
+  <svg class="web web-l" viewBox="0 0 120 120" aria-hidden="true"><use href="#cobweb"/></svg>
+  <svg class="web web-r" viewBox="0 0 120 120" aria-hidden="true"><use href="#cobweb"/></svg>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="cobweb" fill="none" stroke="rgba(235,215,220,.55)" stroke-width=".7" stroke-linecap="round">
+        <path d="M0 0 L120 0 M0 0 L0 120 M0 0 L104 62 M0 0 L62 104 M0 0 L118 30 M0 0 L30 118"/>
+        <path d="M22 0 Q18 18 0 22 M44 0 Q38 38 0 44 M68 0 Q58 58 0 68 M94 0 Q80 80 0 94"/>
+        <path d="M0 0 Q40 14 22 48 M0 0 Q30 40 62 24" opacity=".5"/>
+      </g>
+      <path id="bat" d="M20 12 C17 6 12 5 9 7 C7 3 3 2 0 4 C4 6 5 10 5 13 C8 11 12 11 14 14 C16 12 18 12 20 14 C22 12 24 12 26 14 C28 11 32 11 35 13 C35 10 36 6 40 4 C37 2 33 3 31 7 C28 5 23 6 20 12 Z"/>
+    </defs>
+  </svg>
+  <div class="bats" aria-hidden="true">
+    <svg class="bat b1" viewBox="0 0 40 20"><use href="#bat"/></svg>
+    <svg class="bat b2" viewBox="0 0 40 20"><use href="#bat"/></svg>
+    <svg class="bat b3" viewBox="0 0 40 20"><use href="#bat"/></svg>
+  </div>
+
+  <!-- Botón de música (aparece después de la pregunta inicial) -->
+  <button id="muteBtn" class="mute" type="button" aria-label="Silenciar o activar la música" hidden>♪</button>
+
+  <!-- Todas las "páginas" se construyen aquí desde js/content.js -->
+  <main id="app"></main>
+
+  <!-- Foto ampliada (se abre al tocar una foto) -->
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button id="lbClose" class="lb-close" type="button" aria-label="Cerrar">×</button>
+    <figure class="lb-fig">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+  </div>
+
+  <noscript><p style="padding:24px;color:#fff">Esta página necesita JavaScript para funcionar 🖤</p></noscript>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
